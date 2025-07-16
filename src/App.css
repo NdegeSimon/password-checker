@@ -1,38 +1,191 @@
-.App {
+/* Main container styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+h1 {
+  color: #2c3e50;
   text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form container */
+.form-container {
+  padding: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input group styles */
+.input-group {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Password wrapper styles */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #7f8c8d;
+  padding: 5px;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover {
+  color: #3498db;
+}
+
+/* Strength meter styles */
+.strength-container {
+  margin: 25px 0;
+}
+
+.strength-meter {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 6px;
+  margin: 10px 0;
+  height: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.strength-bar {
+  flex: 1;
+  border-radius: 4px;
+  background-color: #ecf0f1;
+  transition: all 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.strength-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #7f8c8d;
+}
+
+/* Requirements box */
+.requirements {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  border-left: 4px solid #3498db;
+}
+
+.requirements h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.requirements pre {
+  font-family: inherit;
+  white-space: pre-wrap;
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Error messages */
+.error-messages {
+  background-color: #fff5f5;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  border-left: 4px solid #e74c3c;
+}
+
+.error-messages h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #c0392b;
+  font-size: 16px;
+}
+
+.error-messages ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.error-messages li {
+  color: #e74c3c;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .app-container {
+    margin: 20px;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  h1 {
+    font-size: 24px;
   }
+}
+
+/* Color classes for strength meter */
+.strength-1 {
+  background-color: #ff4757 !important; /* Very Weak - Red */
+}
+
+.strength-2 {
+  background-color: #ff7f50 !important; /* Weak - Orange */
+}
+
+.strength-3 {
+  background-color: #ffb74d !important; /* Medium - Yellow/Orange */
+}
+
+.strength-4 {
+  background-color: #66bb6a !important; /* Strong - Green */
+}
+
+.strength-5 {
+  background-color: #2e7d32 !important; /* Very Strong - Dark Green */
 }
